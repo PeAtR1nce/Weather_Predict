@@ -12,7 +12,7 @@ np.random.seed(42)
 # ------------------------------
 # 1. 读取与预处理
 # ------------------------------
-path = r""
+path = r"data.csv"
 data = pd.read_csv(path, sep=';', index_col=False)
 data['当地时间 杭州市(机场)'] = pd.to_datetime(data['当地时间 杭州市(机场)'], format='%d.%m.%Y %H:%M')
 data['month'] = data['当地时间 杭州市(机场)'].dt.month
